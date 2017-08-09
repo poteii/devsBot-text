@@ -9,7 +9,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['text'] == 'ร้องเรียน') {
+		if ($event['type'] == 'message' && $event['message']== 'ร้องเรียน') {
 			// Get text sent
 			$text = "สวัสดีค่ะ ต้องการร้องเรียนเรื่องอะไรคะ"
 			// Get replyToken
