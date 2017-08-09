@@ -24,7 +24,14 @@ if (!is_null($events['events'])) {
 				// Get text sent
 				$text = "กรุณาระบุรายละเอียดดังนี้ 1.ชื่อเจ้าหน้าที่ 2.วันที่เกิดปัญหา 3.เบอร์ติดต่อกลับ";
 			}else if(strstr($event['message']['text'], 'ขอแจ้ง')){
-				$text = "สวัสดีค่ะ มีเรื่องแจ้งอะไรคะ";
+				$actions = array (
+  New \LINE\LINEBot\TemplateActionBuilder\PostbackTemplateActionBuilder("yes", "ans=y"),
+  New \LINE\LINEBot\TemplateActionBuilder\PostbackTemplateActionBuilder("no", "ans=N")
+);
+$button = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilder("confim message", $actions);
+$outputText = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder("confim message", $button);
+$response = $bot->replyMessage($event->getReplyToken(), $outputText);
+			
 				
 			}else{
 				$text = $event['message']['text'];
