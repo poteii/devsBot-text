@@ -14,15 +14,6 @@ if (!is_null($events['events'])) {
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
 			
-			}else if($event['message']['text'] == "ร้องเรียน"){
-				// Get text sent
-				$text = "ต้องการร้องเรียนเรื่องคอมพิวเตอร์กด 1 \n ต้องการร้องเรียนเรื่องพนักงานกด 2";
-			}else if($event['message']['text'] == "1"){
-				// Get text sent
-				$text = "กรุณากรอกรายละเอียดดังนี้ 1.รุ่น 2.วันที่เกิดปัญหา 3.สถานที่"
-			}else if($event['message']['text'] == "2"){
-				// Get text sent
-				$text = "กรุณาระบุรายละเอียดดังนี้ 1.ชื่อเจ้าหน้าที่ 2.วันที่เกิดปัญหา 3.เบอร์ติดต่อกลับ";
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
