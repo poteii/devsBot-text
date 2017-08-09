@@ -9,9 +9,15 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['text'] == "สวัสดี") {
+		if ($event['type'] == 'message' && $event['message']['text'] == 'text') {
+			if($event['message']['text'] == "สวัสดี "){
+				// Get text sent
+				$text = "สวัสดีค่ะ คุณ ".$events['source']['userId'];
+			
+			}else{
 			// Get text sent
-			$text = "สวัสดีค่ะ ต้องการร้องเรียนเรื่องอะไรคะ"
+			$text = $event['message']['text'];
+			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
