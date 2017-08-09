@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			}else if($event['message']['text'] == "2"){
 				// Get text sent
 				$text = "กรุณาระบุรายละเอียดดังนี้ 1.ชื่อเจ้าหน้าที่ 2.วันที่เกิดปัญหา 3.เบอร์ติดต่อกลับ";
-			}else if(strstr($event['message']['text'], 'ขอแจ้ง'){
+			}else if(strstr($event['message']['text'], "ขอแจ้ง"){
 				$text = "สวัสดีค่ะ มีเรื่องแจ้งอะไรคะ";
 				
 			}else{
