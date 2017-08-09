@@ -12,7 +12,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
-				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
+				$text = "สวัสดีค่ะ คุณ ".$event['source']['userName'];
 			
 			}else{
 			// Get text sent
