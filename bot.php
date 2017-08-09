@@ -32,6 +32,7 @@ $button = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\ConfirmTemplateBuilde
 $outputText = new \LINE\LINEBot\MessageBuilder\TemplateMessageBuilder("confim message", $button);
 $response = $bot->replyMessage($event->getReplyToken(), $outputText);
 			
+			echo $response . "\r\n";
 				
 			}else{
 				$text = $event['message']['text'];
