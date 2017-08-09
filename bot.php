@@ -10,7 +10,7 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			if($event['message']['text'] == "สวัสดี "){
+			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$events['source']['userId'];
 			
