@@ -14,17 +14,25 @@ if (!is_null($events['events'])) {
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
 			
-			}else{
-			// Get text sent
-			$text = $event['message']['text'];
+			}else if($event['message']['text'] == "ร้องเรียน"){
+				// Get text sent
+				$buttons = "Please select";
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
+		//	$messages = [
+		//		'type' => 'text',
+		//		'text' => $text
+		//	];
+			
+			
 			$messages = [
-				'type' => 'text',
-				'text' => $text
+				'type' => 'template',
+				'buttons' => $buttons
 			];
+			
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
