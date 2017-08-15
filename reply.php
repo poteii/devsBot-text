@@ -1,9 +1,10 @@
 <?php
 $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+6NxNqZA3ZDmcu/1O7RTO0SL4vUdQdoTgOkQCVJP8Qm5O2ivj40/ezbv/n51ekqhaFUGl47j8Yvx8ChjaEhfH/DAdB04t89/1O/w1cDnyilFU=';
-$messages= {
-    "type": "text",
-    "text": "Hello, world"
-}
+
+$messages = [
+				'type' => 'text',
+				'text' => "Hello, world"
+			];
 // Make a POST Request to Messaging API to reply to sender
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = [
