@@ -13,7 +13,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
-				$text = "สวัสดีค่ะ คุณ ".$event['source']['displayName'];
+				$text = "สวัสดีค่ะ คุณ ".$event['profile']['displayName'];
 				$readme = "userid = ".$event['source']['userId'];
 			
 			}else if($event['message']['text'] == "ร้องเรียน"){
