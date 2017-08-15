@@ -24,17 +24,17 @@ $json = json_encode( $data );
 $curl = curl_init();
 
 // Create
-// curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PUT );
-// curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PUT" );
-// curl_setopt( $curl, CURLOPT_POSTFIELDS, 32 );
+ curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PUT );
+ curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PUT" );
+ curl_setopt( $curl, CURLOPT_POSTFIELDS, 32 );
 
 // Read
 // curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_GET );
 
 // Update
-curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PATCH );
-curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PATCH" );
-curl_setopt( $curl, CURLOPT_POSTFIELDS, $json );
+//curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PATCH );
+//curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PATCH" );
+//curl_setopt( $curl, CURLOPT_POSTFIELDS, $json );
 
 // Delete
 // curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_DELETE );
