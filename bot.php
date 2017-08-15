@@ -55,22 +55,20 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 			
-			$firebaseurl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-		/*	$firebasearr = array("test" =>array("deet" => 123);  
-			$firebasedata_string = json_encode($firebasearr);
-			$firebasech = curl_init($firebaseurl);
-			curl_setopt($firebasech, CURLOPT_CUSTOMREQUEST, "PATCH");
-			curl_setopt($firebasech, CURLOPT_POSTFIELDS, $firebasedata_string);
-			curl_setopt($firebasech, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($firebasech, CURLOPT_SSL_VERIFYHOST, 0);
-			curl_setopt($firebasech, CURLOPT_SSL_VERIFYPEER, 0);
-			curl_setopt($firebasech, CURLOPT_HTTPHEADER, array(
+			$fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
+			$fbarr = array("TEST" =>array("test"=>500,"123"=>100));  
+			$fbdata_string = json_encode($fbarr);
+			$fbch = curl_init($fburl);
+			curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "PATCH");
+			curl_setopt($fbch, CURLOPT_POSTFIELDS, $fbdata_string);
+			curl_setopt($fbch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($fbch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($fbch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($fbch, CURLOPT_HTTPHEADER, array(
 			'Content-Type: application/json',
-			'Content-Length: ' . strlen($firebasedata_string))
+			'Content-Length: ' . strlen($fbdata_string))
 			);
-			echo $firebaseresult = curl_exec($firebasech);
-		
-			*/
+			$fbresult = curl_exec($fbch);
 			
 		}else{
 		
