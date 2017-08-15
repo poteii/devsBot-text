@@ -91,3 +91,4 @@ if (!is_null($events['events'])) {
 
 echo $profile['displayName'];
 echo $profile['userId'];
+?>
