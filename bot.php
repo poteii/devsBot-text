@@ -52,9 +52,9 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			$result . "\r\n";
+			echo $result . "\r\n";
 			
-			
+		/*	
 			$firebaseurl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
 			$firebasearr = array($event['source']['userId'] =>array($event['message']['text']);  
 			$firebasedata_string = json_encode($firebasearr);
@@ -68,8 +68,8 @@ if (!is_null($events['events'])) {
 			'Content-Type: application/json',
 			'Content-Length: ' . strlen($firebasedata_string))
 			);
-			$firebaseresult = curl_exec($firebasech);
-			
+			echo $firebaseresult = curl_exec($firebasech);
+		*/	
 			
 			
 		}else{
