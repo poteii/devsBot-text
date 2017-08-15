@@ -8,6 +8,10 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
+		$userId = $event['source']['userId'];
+		$text = "";
+		
+		
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if($event['message']['text'] == "สวัสดี"){
@@ -56,7 +60,7 @@ if (!is_null($events['events'])) {
 			
 			
 			$fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-			$fbarr = array($event['source']['userId']);  
+			$fbarr = array($userId => $text);  
 			$fbdata_string = json_encode($fbarr);
 			$fbch = curl_init($fburl);
 			curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "PATCH");
