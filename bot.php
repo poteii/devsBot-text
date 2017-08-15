@@ -54,7 +54,7 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $result . "\r\n";
+			$result . "\r\n";
 			
 			
 			$firebaseurl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
