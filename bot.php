@@ -5,6 +5,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 $readme = "text";
+$profile = "profile name";
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -14,7 +15,6 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
 				$profile = "https://api.line.me/v2/bot/profile/".$event['source']['userId'];
-				echo $profile['displayName'];
 				$text = "สวัสดีค่ะ คุณ ".$profile['displayName'];
 				$readme = "userid = ".$event['source']['userId'];
 			
@@ -95,3 +95,4 @@ if (!is_null($events['events'])) {
 $myfile = fopen("testfile.txt", 'w');
 fwrite($myfile,$readme);
 echo "OK";
+echo $profile['displayName'];
