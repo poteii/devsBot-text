@@ -54,9 +54,9 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			echo $result . "\r\n";
 			
-		/*	
+			
 			$firebaseurl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-			$firebasearr = array($event['source']['userId'] =>array($event['message']['text']);  
+			$firebasearr = array("test" =>array("deet" => 123);  
 			$firebasedata_string = json_encode($firebasearr);
 			$firebasech = curl_init($firebaseurl);
 			curl_setopt($firebasech, CURLOPT_CUSTOMREQUEST, "PATCH");
@@ -69,7 +69,7 @@ if (!is_null($events['events'])) {
 			'Content-Length: ' . strlen($firebasedata_string))
 			);
 			echo $firebaseresult = curl_exec($firebasech);
-		*/	
+		
 			
 			
 		}else{
