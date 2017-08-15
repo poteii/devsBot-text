@@ -1,55 +1,16 @@
 <?php
-
-// Constants
-$FIREBASE = "https://myfirstfirebase-3f424.firebaseio.com";
-$NODE_DELETE = "temperature.json";
-$NODE_GET = "temperature.json";
-$NODE_PATCH = ".json";
-$NODE_PUT = "temperature.json";
-
-// Data for PUT
-// Node replaced
-$data = 32;
-
-// Data for PATCH
-// Matching nodes updated
-$data = array(
-    "temperature" => 42
+$url = 'https://myfirstfirebase-3f424.firebaseio.com/Devices.json';
+$arr = array("Devices" =>array("iPhone"=>500));  
+$data_string = json_encode($arr);
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'Content-Type: application/json',
+'Content-Length: ' . strlen($data_string))
 );
-
-// JSON encoded
-$json = json_encode( $data );
-
-// Initialize cURL
-$curl = curl_init();
-
-// Create
- curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PUT );
- curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PUT" );
- curl_setopt( $curl, CURLOPT_POSTFIELDS, 32 );
-
-// Read
-// curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_GET );
-
-// Update
-//curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_PATCH );
-//curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "PATCH" );
-//curl_setopt( $curl, CURLOPT_POSTFIELDS, $json );
-
-// Delete
-// curl_setopt( $curl, CURLOPT_URL, $FIREBASE . $NODE_DELETE );
-// curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, "DELETE" );
-
-// Get return value
-curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
-
-// Make request
-// Close connection
-$response = curl_exec( $curl );
-curl_close( $curl );
-
-// Show result
-echo "test";
-echo $response . "\n";
-
+echo $result = curl_exec($ch);
 ?>
