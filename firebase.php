@@ -49,6 +49,7 @@ $response = curl_exec( $curl );
 curl_close( $curl );
 
 // Show result
+echo "test";
 echo $response . "\n";
 
 ?>
