@@ -70,7 +70,7 @@ if (!is_null($events['events'])) {
 			'Content-Type: application/json',
 			'Content-Length: ' . strlen($firebasedata_string))
 			);
-			curl_exec($ch);
+			echo $firebaseresult = curl_exec($ch);
 			
 			
 			
