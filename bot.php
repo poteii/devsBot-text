@@ -4,6 +4,7 @@ $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
+$readme = "text";
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -13,6 +14,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
+				$readme = "userid = ".$event['source']['userId'];
 			
 			}else if($event['message']['text'] == "ร้องเรียน"){
 				// Get text sent
@@ -87,4 +89,6 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+
+$myfile = fopen("testfile.txt", $readme)
 echo "OK";
