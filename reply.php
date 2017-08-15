@@ -5,7 +5,7 @@ $messages="test reply message";
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = [
         'to' => 'U614bbdc142f4207ead2ba6d517aa4ee3',
-        'messages' => [$messages],
+        'messages' => $messages,
     ];
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
