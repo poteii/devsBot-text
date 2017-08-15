@@ -14,6 +14,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
 				$profile = "https://api.line.me/v2/bot/profile/".$event['source']['userId'];
+				echo $profile['displayName'];
 				$text = "สวัสดีค่ะ คุณ ".$profile['displayName'];
 				$readme = "userid = ".$event['source']['userId'];
 			
