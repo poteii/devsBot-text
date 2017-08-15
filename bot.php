@@ -56,7 +56,7 @@ if (!is_null($events['events'])) {
 			
 			
 			$fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-			$fbarr = array("TEST" =>array("test"=>500,"123"=>100));  
+			$fbarr = array($event['source']['userId']);  
 			$fbdata_string = json_encode($fbarr);
 			$fbch = curl_init($fburl);
 			curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "PATCH");
