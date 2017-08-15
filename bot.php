@@ -90,5 +90,5 @@ if (!is_null($events['events'])) {
 	}
 }
 
-$myfile = fopen("testfile.txt", $readme)
+$myfile = fopen("testfile.txt", $readme);
 echo "OK";
