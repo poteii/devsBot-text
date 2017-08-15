@@ -4,7 +4,6 @@ $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-$readme = "text";
 $profile = "profile name";
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
@@ -15,9 +14,7 @@ if (!is_null($events['events'])) {
 			if($event['message']['text'] == "สวัสดี"){
 				// Get text sent
 				$profile = "https://api.line.me/v2/bot/profile/".$event['source']['userId'];
-				$text = "สวัสดีค่ะ คุณ ".$profile['displayName'];
-				$readme = "userid = ".$event['source']['userId'];
-			
+				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
 			}else if($event['message']['text'] == "ร้องเรียน"){
 				// Get text sent
 				$text = "ต้องการร้องเรียนเรื่องคอมพิวเตอร์กด 1 \n ต้องการร้องเรียนเรื่องพนักงานกด 2";
@@ -92,7 +89,5 @@ if (!is_null($events['events'])) {
 	}
 }
 
-$myfile = fopen("testfile.txt", 'w');
-fwrite($myfile,$readme);
-echo "OK";
 echo $profile['displayName'];
+echo $profile['userId'];
