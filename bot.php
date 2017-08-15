@@ -55,6 +55,25 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
+			
+			
+			$firebaseurl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
+			$firebasearr = array($event['source']['userId'] =>array($event['message']['text']);  
+			$firebasedata_string = json_encode($firebasearr);
+			$firebasech = curl_init($firebaseurl);
+			curl_setopt($firebasech, CURLOPT_CUSTOMREQUEST, "PATCH");
+			curl_setopt($firebasech, CURLOPT_POSTFIELDS, $firebasedata_string);
+			curl_setopt($firebasech, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($firebasech, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($firebasech, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($firebasech, CURLOPT_HTTPHEADER, array(
+			'Content-Type: application/json',
+			'Content-Length: ' . strlen($firebasedata_string))
+			);
+			curl_exec($ch);
+			
+			
+			
 		}else{
 		
 			// Get text sent
