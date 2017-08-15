@@ -1,6 +1,6 @@
 <?php
 $url = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-$arr = array("TEST" =>array("test"=>500,"123"=>100));  
+$arr = array("TEST" =>array("test"=>array("a"=>123)));  
 $data_string = json_encode($arr);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
