@@ -12,5 +12,5 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Content-Type: application/json',
 'Content-Length: ' . strlen($data_string))
 );
-$return = curl_exec($ch);
+$result = curl_exec($ch);
 ?>
