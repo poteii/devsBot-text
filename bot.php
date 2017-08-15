@@ -64,7 +64,7 @@ if (!is_null($events['events'])) {
 			$fbarr = array($userId => array($replyToken => $text));  
 			$fbdata_string = json_encode($fbarr);
 			$fbch = curl_init($fburl);
-			curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "GET");
 			curl_setopt($fbch, CURLOPT_POSTFIELDS, $fbdata_string);
 			curl_setopt($fbch, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($fbch, CURLOPT_SSL_VERIFYHOST, 0);
