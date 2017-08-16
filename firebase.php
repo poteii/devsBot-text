@@ -19,6 +19,7 @@ $arr_result = explode(",",$result);
 //print_r ($arr_result);
 foreach($arr_result as $key => $value){
   //print_r($value);
-  echo $key . "---" . $value . " <br/>";
+  $arr_result1 = explode(":",$value);
+  print_r($arr_result1);
 }
 ?>
