@@ -17,6 +17,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $result = curl_exec($ch);
 //print_r (explode(",",$result));
 foreach($result as $value){
-  print_r($value);
+  echo "arr";
 } 
 ?>
