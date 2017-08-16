@@ -19,6 +19,6 @@ $arr_result = explode(",",$result);
 //print_r ($arr_result);
 foreach($arr_result as $value){
   print_r($value);
-  echo "************************************\n";
+  echo "************************************ /n";
 }
 ?>
