@@ -6,9 +6,8 @@ $userId =  "<?php echo $_POST['userId']; ?>";
 $subject = "<?php echo $_POST['subject'];?>";
 $detail =  "<?php echo $_POST['detail']; ?>";
 
-
 $fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-$fbarr = array(=>$userId array($subject=> $detail));  
+$fbarr = array($userId => array($subject=> $detail));  
 $fbdata_string = json_encode($fbarr);
 $fbch = curl_init($fburl);
 curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "POST");
