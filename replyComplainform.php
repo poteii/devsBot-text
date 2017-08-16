@@ -5,7 +5,7 @@ $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+
 
 
 $fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
-$fbarr = array($userId => array($subject => $detail));  
+$fbarr = array(<?php echo $_POST["userId"]; ?> => array(<?php echo $_POST["subject"]; ?> => <?php echo $_POST["detail"]; ?>));  
 $fbdata_string = json_encode($fbarr);
 $fbch = curl_init($fburl);
 curl_setopt($fbch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -28,7 +28,7 @@ $messages = [
 // Make a POST Request to Messaging API to reply to sender
 $url = 'https://api.line.me/v2/bot/message/push';
 $data = [
-    'to' => 'U614bbdc142f4207ead2ba6d517aa4ee3' ,
+    'to' => <?php echo $_POST["userId"]; ?> ,
     'messages' => [$messages],
 ];
 $post = json_encode($data);
