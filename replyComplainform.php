@@ -2,10 +2,11 @@
 <?php
 
 $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+6NxNqZA3ZDmcu/1O7RTO0SL4vUdQdoTgOkQCVJP8Qm5O2ivj40/ezbv/n51ekqhaFUGl47j8Yvx8ChjaEhfH/DAdB04t89/1O/w1cDnyilFU=';
-/*$userId =  "<?php echo $_POST['userId']; ?>";
+/*
 $subject = "<?php echo $_POST['subject']; ?>";
 $detail =  "<?php echo $_POST['detail']; ?>";*/
-$userId = "U614bbdc142f4207ead2ba6d517aa4ee3";
+//$userId = "U614bbdc142f4207ead2ba6d517aa4ee3";
+$userId = <?php echo $_POST['userId']; ?>;
 $subject = "subject";
 $detail = "detail";
 
