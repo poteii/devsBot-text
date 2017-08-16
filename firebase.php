@@ -18,6 +18,7 @@ $result = curl_exec($ch);
 $result = (explode(",",$result);
 echo "-----------print_r-------------";
 foreach($result as $value){
-   echo "Value: $value<br />\n";
+   //echo "Value: $value<br />\n";
+   print_r($value);
 } 
 ?>
