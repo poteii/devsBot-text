@@ -13,15 +13,17 @@ echo $_GET["userId"]; ?>	</h3>
 	
 	
 <p>example input</p>
-<form id="form1" name="form1" method="post" action="reply.php<?php echo '?userId='.$userId ?>">
-<p>name
-<input name="name" type="text" id="name" size="50" />
+<form id="form1" name="form1" method="post" action="replyComplainform.php">
+<p>เรื่อง
+<input name="subject" type="text" id="subject" size="50" />
 <br />
-score
-<input name="score" type="text" id="score" size="5" maxlength="5" />
-score<br />
+รายละเอียด
+<input name="detail" type="text" id="detail" size="80" />
+<br />
 <input type="submit" name="Submit" value="Submit" />
 </p>
+	
+<input name="user" type="hidden" id="user" value="$userId"/>
 </form>
  
 <p>&nbsp; </p>
