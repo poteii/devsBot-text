@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"  />
+<title>Form Example</title>
+</head>
+
+<body>
+	
+	<h3>value is <?php echo $_GET["var1"]; ?>	</h3>
+	
+	
+<p>example input</p>
+<form id="form1" name="form1" method="post" action="reply.php">
+<p>name
+<input name="name" type="text" id="name" size="50" />
+<br />
+score
+<input name="score" type="text" id="score" size="5" maxlength="5" />
+score<br />
+<input type="submit" name="Submit" value="Submit" />
+</p>
+</form>
+ 
+<p>&nbsp; </p>
+
+	
+	
+</body>
+</html>
