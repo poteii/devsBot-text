@@ -15,7 +15,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Content-Length: ' . strlen($data_string))
 );*/
 $result = curl_exec($ch);
-//print_r (explode(",",$result));
+$result = (explode(",",$result));
 foreach($result as $value){
   echo "arr";
 } 
