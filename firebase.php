@@ -15,9 +15,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Content-Length: ' . strlen($data_string))
 );*/
 $result = curl_exec($ch);
-regenerateArray($result);
+$arr_result = regenerateArray($result);
 echo 'มันจะเอาตัวสุดท้ายเพราะ key จะเป็น key เดียวกัน คือ userid <br/>';
-foreach($arr3 as $key => $v){
+foreach($arr_result as $key => $v){
 	echo 'user: <b>'.$key . '</b> send this message [' . $v . ']<br/>';
 }
 
