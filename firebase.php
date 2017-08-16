@@ -22,7 +22,7 @@ foreach($arr_result as $key => $value){
   $arr_result1 = explode(":",$value);
   //print_r($arr_result1);
   foreach($arr_result1 as $key1 => $value1){
-    echo $key1 . ">>>>>>>" .$value1;
+    echo $value1;
     echo "<br/>"
   }
 }
