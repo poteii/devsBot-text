@@ -8,11 +8,13 @@
 
 <body>
 	
-	<h3>value is <?php echo $_GET["var1"]; ?>	</h3>
+	<h3>value is <?php
+$userId = $_GET["var1"];
+echo $_GET["var1"]; ?>	</h3>
 	
 	
 <p>example input</p>
-<form id="form1" name="form1" method="post" action="reply.php">
+<form id="form1" name="form1" method="post" action="reply.php?userId=$userId">
 <p>name
 <input name="name" type="text" id="name" size="50" />
 <br />
