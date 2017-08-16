@@ -21,9 +21,9 @@ foreach($arr_result as $key => $value){
   //print_r($value);
   $arr_result1 = explode(":",$value);
   print_r($arr_result1);
- /* foreach($arr_result1 => $value1){
-    print_r($value1);
+  foreach($arr_result1 as $key1 => $value1){
+    echo $key1 . '.....' .$value1;
     echo "<br/>"
-  }*/
+  }
 }
 ?>
