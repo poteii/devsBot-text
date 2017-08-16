@@ -16,6 +16,7 @@ curl_setopt( $retch, CURLOPT_RETURNTRANSFER, true );
 $result = curl_exec($retch);
 $receivers = regenerateArray($result);
 foreach($receivers as $key => $value){
+	echo $value;
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = [
         'to' => $key,
