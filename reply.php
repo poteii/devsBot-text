@@ -5,7 +5,7 @@ $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+
 
 $messages = [
 				'type' => 'text',
-				'text' => "Hello, world"
+				'text' => "Hi from 7O2!!!"
 			];
 // Make a POST Request to Messaging API to reply to sender
 
