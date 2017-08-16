@@ -18,7 +18,7 @@ $result = curl_exec($ch);
 $arr_result = explode(",",$result);
 //print_r ($arr_result);
 foreach($arr_result as $key => $value){
-  print_r($value);
+  //print_r($value);
   echo $key . "---" . $value . " <br/>";
 }
 ?>
