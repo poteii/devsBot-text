@@ -15,15 +15,28 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 'Content-Length: ' . strlen($data_string))
 );*/
 $result = curl_exec($ch);
-echo $result;
-$arr_result = explode(",",$result);
-//print_r ($arr_result);
-foreach($arr_result as $key => $value){
-  //print_r($value);
-  $arr_result1 = explode(":",$value);
-  //print_r($arr_result1);
-  foreach($arr_result1 as $value1){
-    //print_r($value1);
-  }
+$resarray = json_decode($result,true);
+$arr;
+$arr2;
+//print_r($resarray);
+$index = 0;
+foreach($resarray as $key => $value){
+	foreach($value as $k => $val){
+		$arr[$index] = array($k=>$val);
+		$arr2[$k] = $val;
+		$index++;
+	}
 }
+
+$arr3;
+foreach($arr2 as $key => $value){
+	foreach($value as $v){
+	$arr3[$key] = $v;
+	}
+}
+echo 'มันจะเอาตัวสุดท้ายเพราะ key จะเป็น key เดียวกัน คือ userid <br/>';
+foreach($arr3 as $key => $v){
+	echo 'user: <b>'.$key . '</b> send this message [' . $v . ']<br/>';
+}
+
 ?>
