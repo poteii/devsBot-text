@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 				// Get text sent
 				$text = "กรุณาระบุรายละเอียดดังนี้ 1.ชื่อเจ้าหน้าที่ 2.วันที่เกิดปัญหา 3.เบอร์ติดต่อกลับ";
 			}else if(strstr($event['message']['text'], 'ขอแจ้ง')){
-				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/input.html";
+				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/input.html?id=".$event['source']['userId'];
 				
 				
 			}else{
