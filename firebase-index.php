@@ -40,7 +40,7 @@ $result_str = displayUsers($result);
    <div class="row">
      <div class="col-sm-5">
     	<label for="msg">Message:</label>
-	      <input type="text" class="form-control" id="msg">
+	      <input type="text" class="form-control" id="msg" name="msg">
     </div>
     <div class="col-sm-7"></div>
   </div>
