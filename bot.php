@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			if(strstr($event['message']['text'], 'สวัสดี')){
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
-			}else if(strstr($event['message']['text'], 'ร้องเรียน') , strstr($event['message']['text'], 'ปัญหา')){
+			}else if(strstr($event['message']['text'], 'ร้องเรียน') ||  strstr($event['message']['text'], 'ปัญหา')){
 				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['userId'];
 			}else{
 				$text = $event['message']['text'];
