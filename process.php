@@ -34,6 +34,6 @@ foreach($selected_users as $value){
     echo $result . "\r\n";
 }*/
 echo 'done!!';
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
+	//header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 ?>
