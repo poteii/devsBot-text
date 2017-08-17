@@ -37,6 +37,13 @@ $result_str = displayUsers($result);
     </div>
     <div class="col-sm-7"></div>
   </div>
+   <div class="row">
+     <div class="col-sm-5">
+    	<label for="msg">Message:</label>
+	      <input type="text" class="form-control" id="msg">
+    </div>
+    <div class="col-sm-7"></div>
+  </div>
   <div class="row">
   <div class="col-sm-5">
     	<input type="submit" value="Submit" class="btn btn-primary"></input>
