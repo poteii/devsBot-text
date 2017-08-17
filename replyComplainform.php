@@ -5,8 +5,8 @@ $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+
 
 //$userId = "U614bbdc142f4207ead2ba6d517aa4ee3";
 $userId = echo $_POST["userId"];
-$subject = echo $_POST["subject"];
-$detail = echo $_POST["detail"];
+//$subject = echo $_POST["subject"];
+//$detail = echo $_POST["detail"];
 
 $fburl = 'https://myfirstfirebase-3f424.firebaseio.com/FirstBase.json';
 $fbarr = array($userId => array($subject=> $detail));  
