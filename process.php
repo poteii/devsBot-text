@@ -2,7 +2,9 @@
 $selected_users = $_POST['sel2'];
 $message = $_POST['msg'];
 
-include 'input.php';
+echo $message ;
+
+//include 'input.php';
 $access_token = 'nh7BWpnKFdxiz9UTcB3HttsbbBC9DIxMHeQUGznWDqLQ6yAyM9iyYSqn6BO4Yg+6NxNqZA3ZDmcu/1O7RTO0SL4vUdQdoTgOkQCVJP8Qm5O2ivj40/ezbv/n51ekqhaFUGl47j8Yvx8ChjaEhfH/DAdB04t89/1O/w1cDnyilFU=';
 
 $messages = [
@@ -13,6 +15,7 @@ $messages = [
 
 
 foreach($selected_users as $value){
+	echo $value;
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = [
         'to' => $value,
@@ -30,7 +33,7 @@ foreach($selected_users as $value){
     curl_close($ch);
     echo $result . "\r\n";
 }
-
+echo 'done!!';
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 ?>
