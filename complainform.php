@@ -18,15 +18,19 @@ echo $_GET["userId"]; ?>	</h3>
 	
 <p>example input</p>
 <form id="form1" name="form1" method="post" action="replyComplainform.php">
+	<div class="row">
+<div class="col-sm-4">
 <p>เรื่อง
 <input class="form-control" name="subject" type="text" id="subject" size="50" />
 <br />
 รายละเอียด
 <input class="form-control" name="detail" type="text" id="detail" size="80" />
 <br />
-<input class="form-control" type="submit" name="Submit" value="Submit" />
+<input class="btn btn-primary" type="submit" name="Submit" value="Submit" />
 </p>
-<input class="btn btn-primary" type="hidden" name="user" value="<?php echo $userId; ?>"> 
+<input  type="hidden" name="user" value="<?php echo $userId; ?>"> 
+</div>
+	</div>
 </form>
  
 <p>&nbsp; </p>
