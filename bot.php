@@ -5,6 +5,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
+
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -19,7 +20,7 @@ if (!is_null($events['events'])) {
 				// Get text sent
 				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
 			}else if(strstr($event['message']['text'], 'ร้องเรียน') ||  strstr($event['message']['text'], 'ปัญหา')){
-				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['userName'];
+				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['displayName'];
 			}else{
 				$text = $event['message']['text'];
 			}
