@@ -19,7 +19,7 @@ $result_str = displayUsers($result);
 <div class="container-fluid">
   <h1>Line Message API Server side</h1>
   <p>Send Line message to specific users.</p>
-  <div class="row">
+ <!-- <div class="row">
      <div class="col-sm-5">
     	<label for="users">Plaintext from firebase:</label>
 	     <textarea class="form-control"  id="users" rows="5" disabled="true">
@@ -27,7 +27,7 @@ $result_str = displayUsers($result);
 	     </textarea>
     </div>
     <div class="col-sm-7"></div>
-  </div>
+  </div> -->
   <div class="row">
      <div class="col-sm-5">
     	<label for="sel2">Please select UserId:</label>
