@@ -26,7 +26,7 @@ echo $_GET["userId"]; ?>	</h3>
 <br />
 <input class="form-control" type="submit" name="Submit" value="Submit" />
 </p>
-<input class="form-control" type="hidden" name="user" value="<?php echo $userId; ?>"> 
+<input class="btn btn-primary" type="hidden" name="user" value="<?php echo $userId; ?>"> 
 </form>
  
 <p>&nbsp; </p>
