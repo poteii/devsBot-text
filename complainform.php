@@ -1,7 +1,11 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"  />
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Form Example</title>
 </head>
 
@@ -15,14 +19,14 @@ echo $_GET["userId"]; ?>	</h3>
 <p>example input</p>
 <form id="form1" name="form1" method="post" action="replyComplainform.php">
 <p>เรื่อง
-<input name="subject" type="text" id="subject" size="50" />
+<input class="form-control" name="subject" type="text" id="subject" size="50" />
 <br />
 รายละเอียด
-<input name="detail" type="text" id="detail" size="80" />
+<input class="form-control" name="detail" type="text" id="detail" size="80" />
 <br />
-<input type="submit" name="Submit" value="Submit" />
+<input class="form-control" type="submit" name="Submit" value="Submit" />
 </p>
-<input type="hidden" name="user" value="<?php echo $userId; ?>"> 
+<input class="form-control" type="hidden" name="user" value="<?php echo $userId; ?>"> 
 </form>
  
 <p>&nbsp; </p>
