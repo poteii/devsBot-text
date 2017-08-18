@@ -18,6 +18,7 @@ echo $_GET["userId"]; ?>	</h3>
 	
 <p>example input</p>
 <form id="form1" name="form1" method="post" action="replyComplainform.php">
+	<div class="container">
 	<div class="row">
 <div class="col-sm-4">
 <p>เรื่อง
@@ -30,6 +31,7 @@ echo $_GET["userId"]; ?>	</h3>
 </p>
 <input  type="hidden" name="user" value="<?php echo $userId; ?>"> 
 </div>
+	</div>
 	</div>
 </form>
  
