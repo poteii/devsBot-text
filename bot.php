@@ -15,7 +15,7 @@ if (!is_null($events['events'])) {
 		$url = 'https://api.line.me/v2/bot/profile/'.$userId;
 		$headers1 = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		$ch1 = curl_init();
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers1);
+		curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers1);
 		curl_setopt($ch1,CURLOPT_URL,$url);
 		curl_setopt($ch1,CURLOPT_RETURNTRANSFER,1);
 		curl_setopt($ch1,CURLOPT_CONNECTTIMEOUT,10);
