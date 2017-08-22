@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 		$profile = json_decode($data);
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			if(strstr($event['message']['text'], 'สวัสดี')){
+			if(strstr($event['message']['text'], 'สวัสดี') || strstr($event['message']['text'], 'hello')){
 				// Get text sent
 				
 				$text = "สวัสดีค่ะ คุณ ".$profile->displayName;
