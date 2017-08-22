@@ -13,7 +13,12 @@ if (!is_null($events['events'])) {
 		$text = "";
 		$replyToken = "";
 		$url = 'https://api.line.me/v2/bot/profile/'.$userId;
-		$data = file_get_contents($url);
+		$ch1 = curl_init();
+		curl_setopt($ch1,CURLOPT_URL,$url);
+		curl_setopt($ch1,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch1,CURLOPT_CONNECTTIMEOUT,10);
+		$data = curl_exec($ch1);
+		curl_close($ch1);
 		$profile = json_decode($data);
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
