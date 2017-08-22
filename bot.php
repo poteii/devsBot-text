@@ -12,8 +12,8 @@ if (!is_null($events['events'])) {
 		$userId = $event['source']['userId'];
 		$text = "";
 		$replyToken = "";
-		$temp = "https://api.line.me/v2/bot/profile/".$userId;
-        $profile = json_encode($temp);
+		$profile = "https://api.line.me/v2/bot/profile/".$userId;
+        	
 		
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
