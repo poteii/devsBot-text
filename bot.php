@@ -101,14 +101,14 @@ if (!is_null($events['events'])) {
 	}
 }
 
-function get_data($url) {
-	$ch = curl_init();
+function get_data($urla) {
+	$churl = curl_init();
 	$timeout = 5;
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-	$data = curl_exec($ch);
-	curl_close($ch);
+	curl_setopt($churl, CURLOPT_URL, $urla);
+	curl_setopt($churl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($churl, CURLOPT_CONNECTTIMEOUT, $timeout);
+	$data = curl_exec($churl);
+	curl_close($churl);
 	return $data;
 }
 
