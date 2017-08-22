@@ -19,8 +19,8 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if(strstr($event['message']['text'], 'สวัสดี')){
 				// Get text sent
-				$text = $profile->displayName;
-				//$text = "สวัสดีค่ะ คุณ ".$profile;
+				
+				$text = "สวัสดีค่ะ คุณ ".$data;
 			}else if(strstr($event['message']['text'], 'ร้องเรียน') ||  strstr($event['message']['text'], 'ปัญหา')){
 				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['userId'];
 			}else{
