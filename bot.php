@@ -13,14 +13,7 @@ if (!is_null($events['events'])) {
 		$text = "";
 		$replyToken = "";
 		$url = 'https://api.line.me/v2/bot/profile/'.$userId;
-		$chtemp = curl_init($url);
-		curl_setopt($chtemp, CURLOPT_CUSTOMREQUEST, "GET");
-		curl_setopt($chtemp, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($chtemp, CURLOPT_POSTFIELDS, $post);
-		curl_setopt($chtemp, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($chtemp, CURLOPT_FOLLOWLOCATION, 1);
-		$temp = curl_exec($chtemp);
-		curl_close($chtemp);
+		$temp = get_data($url);
 		$profile = json_decode($temp, true);
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
@@ -106,5 +99,16 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
+}
+
+function get_data($url) {
+	$ch = curl_init();
+	$timeout = 5;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
 }
 
