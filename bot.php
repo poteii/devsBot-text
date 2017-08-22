@@ -12,13 +12,13 @@ if (!is_null($events['events'])) {
 		$userId = $event['source']['userId'];
 		$text = "";
 		$replyToken = "";
-		
+		$profile = https://api.line.me/v2/bot/profile/$userId
 		
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if(strstr($event['message']['text'], 'สวัสดี')){
 				// Get text sent
-				$text = "สวัสดีค่ะ คุณ ".$event['source']['userId'];
+				$text = "สวัสดีค่ะ คุณ ".$profile['displayName'];
 			}else if(strstr($event['message']['text'], 'ร้องเรียน') ||  strstr($event['message']['text'], 'ปัญหา')){
 				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['userId'];
 			}else{
