@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			if(strstr($event['message']['text'], 'สวัสดี')){
 				// Get text sent
-				$data = echo $profile[0]['displayName'];
+				$data = $profile[0]['displayName'];
 				$text = "สวัสดีค่ะ คุณ ".$data;
 			}else if(strstr($event['message']['text'], 'ร้องเรียน') ||  strstr($event['message']['text'], 'ปัญหา')){
 				$text = "กรุณากรอกรายละเอียดตามนี้ https://devsbottext.herokuapp.com/complainform.php?userId=".$event['source']['userId'];
@@ -100,15 +100,3 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-
-function get_data($urla) {
-	$churl = curl_init();
-	$timeout = 5;
-	curl_setopt($churl, CURLOPT_URL, $urla);
-	curl_setopt($churl, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($churl, CURLOPT_CONNECTTIMEOUT, $timeout);
-	$data = curl_exec($churl);
-	curl_close($churl);
-	return $data;
-}
-
